@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ES2015",
+        "moduleResolution": "Node16",
+        "types": ["lodash-es"],
+        "baseUrl": "./",
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "skipDefaultLibCheck": true
+    },
+    "exclude": ["node_modules"],
+    "include": ["src/**/*"]
+}
