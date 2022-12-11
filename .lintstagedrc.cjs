@@ -1,3 +1,3 @@
 module.exports = {
-    "src/**/*.{js,vue}": ["eslint --cache", "prettier --write"],
+    "src/**/*.{js,vue}": ["eslint --fix", "prettier --write"],
 };

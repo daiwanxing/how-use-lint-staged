@@ -29,9 +29,14 @@ module.exports = {
         BMapGL: "readonly",
     },
     parser: "vue-eslint-parser",
+    parserOptions: {
+        js: "espree",
+        ecmaVersion: 2021,
+        sourceType: "module",
+    },
     extends: [
-        "eslint:recommended",
         "plugin:vue/vue3-essential",
+        "eslint:recommended",
         // prettier必须放置最后一个，确保能覆盖其他的规则
         "prettier",
     ],
@@ -41,6 +46,7 @@ module.exports = {
         "prettier/prettier": "warn",
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
+        "prefer-const": "error",
         // 以下是由linter处理的代码块logic的相关规则
         "no-console": [
             "warn",
@@ -49,7 +55,6 @@ module.exports = {
                 allow: ["warn", "error"],
             },
         ],
-        "no-unused-vars": ["error"],
         ...vueRules,
     },
     plugins: ["prettier"],
